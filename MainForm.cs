@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RawTextureManager {
-	public partial class Form1 : Form {
-		public Form1() {
+	public partial class MainForm : Form {
+		public MainForm() {
 			InitializeComponent();
 
 			DatFile PlKbNr = JsonConvert.DeserializeObject<DatFile>(File.ReadAllText("C:/Users/Owner/Desktop/kirby.json"));
@@ -25,6 +25,10 @@ namespace RawTextureManager {
 					Height = bmp.Height
 				});
 			}
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
+			new AboutForm().ShowDialog();
 		}
 	}
 }
