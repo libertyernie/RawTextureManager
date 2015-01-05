@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace RawTextureManager {
-	public class DatFile {
+	public class DatFileDefinition {
 		public string Name { get; set; }
 		public DatTexture[] Textures { get; set; }
 	}

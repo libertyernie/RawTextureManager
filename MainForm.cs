@@ -15,15 +15,26 @@ namespace RawTextureManager {
 		public MainForm() {
 			InitializeComponent();
 
-			DatFile PlKbNr = JsonConvert.DeserializeObject<DatFile>(File.ReadAllText("C:/Users/Owner/Desktop/kirby.json"));
-			byte[] data = File.ReadAllBytes("C:/melee/PlKbNr.dat");
+			List<DatFileDefinition> definitions = new List<DatFileDefinition>();
 
-			foreach (Bitmap bmp in PlKbNr.Textures.Select(t => t.ExtractFrom(data))) {
-				this.flowLayoutPanel1.Controls.Add(new PictureBox {
-					Image = bmp,
-					Width = bmp.Width,
-					Height = bmp.Height
-				});
+			foreach (string file in Directory.EnumerateFiles("Definitions")) {
+				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
+			}
+
+			foreach (string file in Directory.EnumerateFiles("C:/melee")) {
+				DatFileDefinition def = definitions.Where(d => d.Name == Path.GetFileName(file)).FirstOrDefault();
+				if (def == null) continue;
+
+				byte[] data = File.ReadAllBytes(file);
+
+				this.flowLayoutPanel1.Controls.Add(new Label { Text = file });
+				foreach (Bitmap bmp in def.Textures.Select(t => t.ExtractFrom(data))) {
+					this.flowLayoutPanel1.Controls.Add(new PictureBox {
+						Image = bmp,
+						Width = bmp.Width,
+						Height = bmp.Height
+					});
+				}
 			}
 		}
 
