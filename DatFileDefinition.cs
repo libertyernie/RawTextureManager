@@ -21,7 +21,20 @@ namespace RawTextureManager {
 		public DatPalette Palette { get; set; }
 
 		public unsafe void ReplaceIn(byte[] file, Bitmap bmp) {
-			throw new NotImplementedException();
+			TextureConverter texconv = TextureConverter.Get(Type);
+			FileMap paletteMap = null;
+			FileMap textureMap = (Palette == null)
+				? texconv.EncodeTEX0Texture(bmp, 1)
+				: texconv.EncodeTextureIndexed(bmp, 1, Palette.Colors, Palette.Type, QuantizationAlgorithm.MedianCut, out paletteMap);
+			TEX0v1* header = (TEX0v1*)textureMap.Address;
+			Marshal.Copy((IntPtr)((byte*)header + TEX0v1.Size), file, Location, header->_header._size - TEX0v1.Size);
+
+			if (paletteMap != null) {
+				Palette.ReplaceIn(file, (PLT0v1*)paletteMap.Address);
+			}
+
+			textureMap.Dispose();
+			if (paletteMap != null) paletteMap.Dispose();
 		}
 
 		public unsafe Bitmap ExtractFrom(byte[] file) {
@@ -50,6 +63,10 @@ namespace RawTextureManager {
 		public WiiPaletteFormat Type { get; set; }
 		public int Colors { get; set; }
 		public int Location { get; set; }
+
+		public unsafe void ReplaceIn(byte[] file, PLT0v1* plt0) {
+			Marshal.Copy((IntPtr)((byte*)plt0 + PLT0v1.Size), file, Location, plt0->_bresEntry._size - PLT0v1.Size);
+		}
 
 		public unsafe UnsafeBuffer ExtractAsPLT0(byte[] file) {
 			int pltsize = Colors * 2;

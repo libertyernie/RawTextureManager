@@ -12,10 +12,14 @@ using System.Windows.Forms;
 
 namespace RawTextureManager {
 	public partial class MainForm : Form {
+		private OpenFileDialog openFileDialog;
+		private List<DatFileDefinition> definitions;
+
 		public MainForm() {
 			InitializeComponent();
 
-			List<DatFileDefinition> definitions = new List<DatFileDefinition>();
+			openFileDialog = new OpenFileDialog();
+			definitions = new List<DatFileDefinition>();
 
 			foreach (string file in Directory.EnumerateFiles("Definitions")) {
 				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
@@ -27,13 +31,25 @@ namespace RawTextureManager {
 
 				byte[] data = File.ReadAllBytes(file);
 
+				this.FormClosing += (o, e) => {
+					File.WriteAllBytes("C:/Users/Owner/Desktop/" + Path.GetFileName(file), data);
+				};
+
 				this.flowLayoutPanel1.Controls.Add(new Label { Text = file });
-				foreach (Bitmap bmp in def.Textures.Select(t => t.ExtractFrom(data))) {
-					this.flowLayoutPanel1.Controls.Add(new PictureBox {
+				foreach (var t in def.Textures) {
+					Bitmap bmp = t.ExtractFrom(data);
+					PictureBox pb = new PictureBox {
 						Image = bmp,
 						Width = bmp.Width,
 						Height = bmp.Height
-					});
+					};
+					pb.Click += (o, e) => {
+						if (openFileDialog.ShowDialog() == DialogResult.OK) {
+							t.ReplaceIn(data, BrawlLib.Imaging.TGA.FromFile(openFileDialog.FileName));
+							pb.Image = t.ExtractFrom(data);
+						}
+					};
+					this.flowLayoutPanel1.Controls.Add(pb);
 				}
 			}
 		}
