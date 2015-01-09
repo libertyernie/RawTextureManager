@@ -26,8 +26,16 @@ namespace RawTextureManager {
 			FileMap textureMap = (Palette == null)
 				? texconv.EncodeTEX0Texture(bmp, 1)
 				: texconv.EncodeTextureIndexed(bmp, 1, Palette.Colors, Palette.Type, QuantizationAlgorithm.MedianCut, out paletteMap);
+
 			TEX0v1* header = (TEX0v1*)textureMap.Address;
-			Marshal.Copy((IntPtr)((byte*)header + TEX0v1.Size), file, Location, header->_header._size - TEX0v1.Size);
+			IntPtr texdata = (IntPtr)(header + 1);
+			int texsize = header->_header._size - sizeof(TEX0v1);
+
+			Marshal.Copy(
+				texdata,
+				file,
+				Location,
+				texsize);
 
 			if (paletteMap != null) {
 				Palette.ReplaceIn(file, (PLT0v1*)paletteMap.Address);
@@ -41,12 +49,16 @@ namespace RawTextureManager {
 			TextureConverter texconv = TextureConverter.Get(Type);
 
 			int texsize = texconv.GetMipOffset(Width, Height, 1 + 1);
-			using (UnsafeBuffer texbuf = new UnsafeBuffer(TEX0v1.Size + texsize)) {
+			using (UnsafeBuffer texbuf = new UnsafeBuffer(sizeof(TEX0v1) + texsize)) {
 				TEX0v1* header = (TEX0v1*)texbuf.Address;
-				byte* texdata = (byte*)header + TEX0v1.Size;
+				IntPtr texdata = (IntPtr)(header + 1);
 
 				*header = new TEX0v1(Width, Height, Type, 1);
-				Marshal.Copy(file, Location, (IntPtr)texdata, texsize);
+				Marshal.Copy(
+					file,
+					Location,
+					texdata,
+					texsize);
 
 				if (Palette == null) {
 					return texconv.DecodeTexture(header);
@@ -65,18 +77,29 @@ namespace RawTextureManager {
 		public int Location { get; set; }
 
 		public unsafe void ReplaceIn(byte[] file, PLT0v1* plt0) {
-			Marshal.Copy((IntPtr)((byte*)plt0 + PLT0v1.Size), file, Location, plt0->_bresEntry._size - PLT0v1.Size);
+			IntPtr pltdata = (IntPtr)(plt0 + 1);
+			int pltsize = plt0->_bresEntry._size - sizeof(PLT0v1);
+
+			Marshal.Copy(
+				pltdata,
+				file,
+				Location,
+				pltsize);
 		}
 
 		public unsafe UnsafeBuffer ExtractAsPLT0(byte[] file) {
 			int pltsize = Colors * 2;
-			UnsafeBuffer pltbuf = new UnsafeBuffer(pltsize + PLT0v1.Size);
+			UnsafeBuffer pltbuf = new UnsafeBuffer(pltsize + sizeof(PLT0v1));
 
 			PLT0v1* header = (PLT0v1*)pltbuf.Address;
-			byte* pltdata = (byte*)header + PLT0v1.Size;
+			IntPtr pltdata = (IntPtr)(header + 1);
 
 			*header = new PLT0v1(Colors, Type);
-			Marshal.Copy(file, Location, (IntPtr)pltdata, pltsize);
+			Marshal.Copy(
+				file,
+				Location,
+				pltdata,
+				pltsize);
 
 			return pltbuf;
 		}
