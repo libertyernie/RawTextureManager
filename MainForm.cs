@@ -14,12 +14,14 @@ namespace RawTextureManager {
 	public partial class MainForm : Form {
 		private OpenFileDialog openFileDialog;
 		private List<DatFileDefinition> definitions;
+		private Dictionary<TreeNode, PictureBox> pbs;
 
 		public MainForm() {
 			InitializeComponent();
 
 			openFileDialog = new OpenFileDialog();
 			definitions = new List<DatFileDefinition>();
+			pbs = new Dictionary<TreeNode, PictureBox>();
 
 			foreach (string file in Directory.EnumerateFiles("Definitions")) {
 				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
@@ -31,11 +33,7 @@ namespace RawTextureManager {
 
 				byte[] data = File.ReadAllBytes(file);
 
-				this.FormClosing += (o, e) => {
-					File.WriteAllBytes("C:/Users/Owner/Desktop/" + Path.GetFileName(file), data);
-				};
-
-				this.flowLayoutPanel1.Controls.Add(new Label { Text = file });
+				TreeNode node = this.treeView1.Nodes.Add(file);
 				foreach (var t in def.Textures) {
 					Bitmap bmp = t.ExtractFrom(data);
 					PictureBox pb = new PictureBox {
@@ -49,8 +47,18 @@ namespace RawTextureManager {
 							pb.Image = t.ExtractFrom(data);
 						}
 					};
-					this.flowLayoutPanel1.Controls.Add(pb);
+					TreeNode node2 = node.Nodes.Add(t.Name);
+					pbs.Add(node2, pb);
 				}
+			}
+			treeView1.AfterSelect += treeView1_AfterSelect;
+		}
+
+		void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
+			PictureBox pb;
+			if (pbs.TryGetValue(e.Node, out pb)) {
+				splitContainer1.Panel2.Controls.Clear();
+				splitContainer1.Panel2.Controls.Add(pb);
 			}
 		}
 
