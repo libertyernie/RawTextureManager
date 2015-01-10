@@ -18,24 +18,27 @@ namespace RawTextureManager {
 		public int Width { get; set; }
 		public int Height { get; set; }
 		public int Location { get; set; }
+		public int MipLevels { get; set; }
 		public DatPalette Palette { get; set; }
+
+		public DatTexture() {
+			this.MipLevels = 1;
+		}
 
 		public unsafe void ReplaceIn(byte[] file, Bitmap bmp) {
 			TextureConverter texconv = TextureConverter.Get(Type);
 			FileMap paletteMap = null;
 			FileMap textureMap = (Palette == null)
-				? texconv.EncodeTEX0Texture(bmp, 1)
-				: texconv.EncodeTextureIndexed(bmp, 1, Palette.Colors, Palette.Type, QuantizationAlgorithm.MedianCut, out paletteMap);
+				? texconv.EncodeTEX0Texture(bmp, MipLevels)
+				: texconv.EncodeTextureIndexed(bmp, MipLevels, Palette.Colors, Palette.Type, QuantizationAlgorithm.MedianCut, out paletteMap);
 
 			TEX0v1* header = (TEX0v1*)textureMap.Address;
-			IntPtr texdata = (IntPtr)(header + 1);
-			int texsize = header->_header._size - sizeof(TEX0v1);
 
 			Marshal.Copy(
-				texdata,
+				header->PixelData,
 				file,
 				Location,
-				texsize);
+				header->PixelDataLength);
 
 			if (paletteMap != null) {
 				Palette.ReplaceIn(file, (PLT0v1*)paletteMap.Address);
@@ -48,23 +51,22 @@ namespace RawTextureManager {
 		public unsafe Bitmap ExtractFrom(byte[] file) {
 			TextureConverter texconv = TextureConverter.Get(Type);
 
-			int texsize = texconv.GetMipOffset(Width, Height, 1 + 1);
+			int texsize = texconv.GetMipOffset(Width, Height, MipLevels + 1);
 			using (UnsafeBuffer texbuf = new UnsafeBuffer(sizeof(TEX0v1) + texsize)) {
 				TEX0v1* header = (TEX0v1*)texbuf.Address;
-				IntPtr texdata = (IntPtr)(header + 1);
 
-				*header = new TEX0v1(Width, Height, Type, 1);
+				*header = new TEX0v1(Width, Height, Type, MipLevels);
 				Marshal.Copy(
 					file,
 					Location,
-					texdata,
+					header->PixelData,
 					texsize);
 
 				if (Palette == null) {
 					return texconv.DecodeTexture(header);
 				} else {
 					using (UnsafeBuffer pltbuf = Palette.ExtractAsPLT0(file)) {
-						return texconv.DecodeTextureIndexed(header, (PLT0v1*)pltbuf.Address, 1);
+						return texconv.DecodeTextureIndexed(header, (PLT0v1*)pltbuf.Address, MipLevels);
 					}
 				}
 			}
@@ -77,14 +79,11 @@ namespace RawTextureManager {
 		public int Location { get; set; }
 
 		public unsafe void ReplaceIn(byte[] file, PLT0v1* plt0) {
-			IntPtr pltdata = (IntPtr)(plt0 + 1);
-			int pltsize = plt0->_bresEntry._size - sizeof(PLT0v1);
-
 			Marshal.Copy(
-				pltdata,
+				plt0->PaletteData,
 				file,
 				Location,
-				pltsize);
+				plt0->PaletteDataLength);
 		}
 
 		public unsafe UnsafeBuffer ExtractAsPLT0(byte[] file) {
@@ -92,13 +91,12 @@ namespace RawTextureManager {
 			UnsafeBuffer pltbuf = new UnsafeBuffer(pltsize + sizeof(PLT0v1));
 
 			PLT0v1* header = (PLT0v1*)pltbuf.Address;
-			IntPtr pltdata = (IntPtr)(header + 1);
 
 			*header = new PLT0v1(Colors, Type);
 			Marshal.Copy(
 				file,
 				Location,
-				pltdata,
+				header->PaletteData,
 				pltsize);
 
 			return pltbuf;
