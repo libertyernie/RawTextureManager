@@ -58,6 +58,7 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatFile.cs" />
     <Compile Include="DatFileDefinition.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

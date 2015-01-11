@@ -12,21 +12,25 @@ using System.Windows.Forms;
 
 namespace RawTextureManager {
 	public partial class MainForm : Form {
-		private byte[] currentFileData;
-		private string currentFilePath;
+		public static readonly IReadOnlyCollection<DatFileDefinition> Definitions;
 
+		static MainForm() {
+			var definitions = new List<DatFileDefinition>();
+
+			foreach (string file in Directory.EnumerateFiles("Definitions")) {
+				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
+			}
+
+			Definitions = definitions.AsReadOnly();
+		}
+
+		private DatFile currentFile;
 		private OpenFileDialog openFileDialog;
-		private List<DatFileDefinition> definitions;
 
 		public MainForm() {
 			InitializeComponent();
 
 			openFileDialog = new OpenFileDialog();
-			definitions = new List<DatFileDefinition>();
-
-			foreach (string file in Directory.EnumerateFiles("Definitions")) {
-				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
-			}
 
 			treeView1.AfterSelect += treeView1_AfterSelect;
 		}
@@ -34,7 +38,7 @@ namespace RawTextureManager {
 		void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
 			if (e.Node.Tag is DatTexture) {
 				DatTexture t = (DatTexture)e.Node.Tag;
-				goodPictureBox1.Picture = t.ExtractFrom(currentFileData);
+				goodPictureBox1.Picture = t.ExtractFrom(currentFile.Data);
 			}
 		}
 
@@ -44,19 +48,34 @@ namespace RawTextureManager {
 
 		private void openToolStripMenuItem_Click(object sender, EventArgs e) {
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
-				currentFilePath = openFileDialog.FileName;
-				currentFileData = File.ReadAllBytes(currentFilePath);
+				DatFileDefinition def = Definitions.Where(d => d.Name == Path.GetFileName(openFileDialog.FileName)).FirstOrDefault();
+				if (def == null) {
+					MessageBox.Show("No definition found in the Definitions folder that matches the filename " + Path.GetFileName(openFileDialog.FileName) + ".",
+						"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
 
-				DatFileDefinition def = definitions.Where(d => d.Name == Path.GetFileName(currentFilePath)).FirstOrDefault();
+				currentFile = new DatFile(openFileDialog.FileName, def);
 
 				treeView1.Nodes.Clear();
-				if (def == null) return;
-
 				foreach (var t in def.Textures) {
 					TreeNode node = treeView1.Nodes.Add(t.Name);
 					node.Tag = t;
 				}
 			}
+		}
+
+		private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+
+		}
+
+		private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
+
+		}
+
+		private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
+			treeView1.Nodes.Clear();
+			currentFile = null;
 		}
 	}
 }
