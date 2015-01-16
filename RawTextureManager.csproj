@@ -110,9 +110,9 @@
     <Content Include="Definitions\PlKbBu.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Definitions\PlKbGr.txt">
+    <None Include="Definitions\PlKbGr.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Content Include="Definitions\PlKbNr.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
