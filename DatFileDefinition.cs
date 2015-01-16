@@ -2,6 +2,7 @@
 using BrawlLib.SSBB.ResourceNodes;
 using BrawlLib.SSBBTypes;
 using BrawlLib.Wii.Textures;
+using Newtonsoft.Json;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -17,6 +18,7 @@ namespace RawTextureManager {
 		public WiiPixelFormat Type { get; set; }
 		public int Width { get; set; }
 		public int Height { get; set; }
+		[JsonConverter(typeof(HexIntConverter))]
 		public int Location { get; set; }
 		public int MipLevels { get; set; }
 		public DatPalette Palette { get; set; }
@@ -76,6 +78,7 @@ namespace RawTextureManager {
 	public class DatPalette {
 		public WiiPaletteFormat Type { get; set; }
 		public int Colors { get; set; }
+		[JsonConverter(typeof(HexIntConverter))]
 		public int Location { get; set; }
 
 		public unsafe void ReplaceIn(byte[] file, PLT0v1* plt0) {

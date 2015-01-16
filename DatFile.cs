@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RawTextureManager {
 	public class DatFile {
-		public string Name { get; private set; }
+		public string Name { get; set; }
 		public byte[] Data { get; private set; }
 		public DatFileDefinition Definition { get; private set; }
 

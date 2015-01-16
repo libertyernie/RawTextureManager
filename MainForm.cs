@@ -25,12 +25,15 @@ namespace RawTextureManager {
 		}
 
 		private DatFile currentFile;
+
 		private OpenFileDialog openFileDialog;
+		private SaveFileDialog saveFileDialog;
 
 		public MainForm() {
 			InitializeComponent();
 
 			openFileDialog = new OpenFileDialog();
+			saveFileDialog = new SaveFileDialog();
 
 			treeView1.AfterSelect += treeView1_AfterSelect;
 		}
@@ -47,6 +50,9 @@ namespace RawTextureManager {
 		}
 
 		private void openToolStripMenuItem_Click(object sender, EventArgs e) {
+			if (currentFile != null) {
+				openFileDialog.InitialDirectory = Path.GetDirectoryName(currentFile.Name);
+			}
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
 				DatFileDefinition def = Definitions.Where(d => d.Name == Path.GetFileName(openFileDialog.FileName)).FirstOrDefault();
 				if (def == null) {
@@ -66,11 +72,20 @@ namespace RawTextureManager {
 		}
 
 		private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
-
+			if (currentFile == null) return;
+			File.WriteAllBytes(currentFile.Name, currentFile.Data);
+			currentFile.Modified = false;
 		}
 
 		private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
-
+			if (currentFile == null) return;
+			saveFileDialog.InitialDirectory = Path.GetDirectoryName(currentFile.Name);
+			saveFileDialog.FileName = currentFile.Name;
+			if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+				currentFile.Name = saveFileDialog.FileName;
+				File.WriteAllBytes(currentFile.Name, currentFile.Data);
+				currentFile.Modified = false;
+			}
 		}
 
 		private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
