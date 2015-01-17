@@ -13,14 +13,16 @@ namespace RawTextureManager {
 		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
 			string value = reader.Value.ToString();
 			if (value.StartsWith("0x", StringComparison.InvariantCultureIgnoreCase)) {
-				return int.Parse(value.Substring(2), System.Globalization.NumberStyles.HexNumber);
-			} else {
-				return int.Parse(value);
+				int output;
+				if (int.TryParse(value.Substring(2), System.Globalization.NumberStyles.HexNumber, null, out output)) {
+					return output;
+				}
 			}
+			return serializer.Deserialize<int>(reader);
 		}
 
 		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {
-			writer.WriteValue(((int)value).ToString("X2"));
+			writer.WriteValue("0x" + ((int)value).ToString("X2"));
 		}
 	}
 }

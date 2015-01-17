@@ -18,7 +18,13 @@ namespace RawTextureManager {
 			var definitions = new List<DatFileDefinition>();
 
 			foreach (string file in Directory.EnumerateFiles("Definitions")) {
-				definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
+				try {
+					definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
+				} catch (JsonSerializationException e) {
+					string filename = Path.GetFileName(file);
+					Console.WriteLine(filename + ": " + e.GetType() + ": " + e.Message + Environment.NewLine + e.StackTrace);
+					MessageBox.Show("Could not parse " + filename + ": " + e.Message, "Error in " + filename);
+				}
 			}
 
 			Definitions = definitions.AsReadOnly();
