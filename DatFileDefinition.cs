@@ -11,6 +11,10 @@ namespace RawTextureManager {
 	public class DatFileDefinition {
 		public string Name { get; set; }
 		public DatTexture[] Textures { get; set; }
+
+		public override string ToString() {
+			return string.Format("{0} ({1} textures)", Name, Textures.Length);
+		}
 	}
 
 	public class DatTexture {
@@ -22,6 +26,10 @@ namespace RawTextureManager {
 		public int Location { get; set; }
 		public int MipLevels { get; set; }
 		public DatPalette Palette { get; set; }
+
+		public override string ToString() {
+			return string.Format("0x{0} {1} ({2}x{3} {4})", Location.ToString("X2"), Name, Width, Height, Type);
+		}
 
 		public DatTexture() {
 			this.MipLevels = 1;

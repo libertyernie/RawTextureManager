@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -60,17 +62,17 @@ namespace RawTextureManager {
 				openFileDialog.InitialDirectory = Path.GetDirectoryName(currentFile.Name);
 			}
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
-				DatFileDefinition def = Definitions.Where(d => d.Name == Path.GetFileName(openFileDialog.FileName)).FirstOrDefault();
-				if (def == null) {
+				List<DatFileDefinition> defs = Definitions.Where(d => Operators.LikeString(Path.GetFileName(openFileDialog.FileName), d.Name, Microsoft.VisualBasic.CompareMethod.Text)).ToList();
+				if (!defs.Any()) {
 					MessageBox.Show("No definition found in the Definitions folder that matches the filename " + Path.GetFileName(openFileDialog.FileName) + ".",
 						"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 
-				currentFile = new DatFile(openFileDialog.FileName, def);
+				currentFile = new DatFile(openFileDialog.FileName, defs.SelectMany(d => d.Textures));
 
 				treeView1.Nodes.Clear();
-				foreach (var t in def.Textures) {
+				foreach (var t in currentFile.Textures) {
 					TreeNode node = treeView1.Nodes.Add(t.Name);
 					node.Tag = t;
 				}
