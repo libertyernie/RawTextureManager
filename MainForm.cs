@@ -49,7 +49,7 @@ namespace RawTextureManager {
 		void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
 			if (e.Node.Tag is DatTexture) {
 				DatTexture t = (DatTexture)e.Node.Tag;
-				goodPictureBox1.Picture = t.ExtractFrom(currentFile.Data);
+				goodPictureBox1.Picture = t.Extract();
 			}
 		}
 
@@ -72,8 +72,8 @@ namespace RawTextureManager {
 				currentFile = new DatFile(openFileDialog.FileName, defs.SelectMany(d => d.Textures));
 
 				treeView1.Nodes.Clear();
-				foreach (var t in currentFile.Textures) {
-					TreeNode node = treeView1.Nodes.Add(t.Name);
+				foreach (DatTexture t in currentFile.Textures) {
+					TreeNode node = treeView1.Nodes.Add(t.Definition.Name);
 					node.Tag = t;
 				}
 			}
