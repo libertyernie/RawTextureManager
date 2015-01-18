@@ -1,4 +1,5 @@
-﻿using BrawlLib.IO;
+﻿using BrawlLib.Imaging;
+using BrawlLib.IO;
 using BrawlLib.SSBBTypes;
 using BrawlLib.Wii.Textures;
 using System;

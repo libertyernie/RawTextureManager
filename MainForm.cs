@@ -36,12 +36,16 @@ namespace RawTextureManager {
 
 		private OpenFileDialog openFileDialog;
 		private SaveFileDialog saveFileDialog;
+		private OpenFileDialog replaceFileDialog;
+		private SaveFileDialog exportFileDialog;
 
 		public MainForm() {
 			InitializeComponent();
 
 			openFileDialog = new OpenFileDialog();
 			saveFileDialog = new SaveFileDialog();
+			replaceFileDialog = new OpenFileDialog();
+			exportFileDialog = new SaveFileDialog();
 
 			treeView1.AfterSelect += treeView1_AfterSelect;
 		}
@@ -50,6 +54,10 @@ namespace RawTextureManager {
 			if (e.Node.Tag is DatTexture) {
 				DatTexture t = (DatTexture)e.Node.Tag;
 				goodPictureBox1.Picture = t.Extract();
+				btnReplace.Enabled = btnExtract.Enabled = true;
+			} else {
+				goodPictureBox1.Picture = null;
+				btnReplace.Enabled = btnExtract.Enabled = false;
 			}
 		}
 
@@ -75,6 +83,10 @@ namespace RawTextureManager {
 				foreach (DatTexture t in currentFile.Textures) {
 					TreeNode node = treeView1.Nodes.Add(t.Definition.Name);
 					node.Tag = t;
+					if (t.Palette != null) {
+						TreeNode node2 = node.Nodes.Add(t.Definition.Name);
+						node2.Tag = t.Palette;
+					}
 				}
 			}
 		}
@@ -99,6 +111,25 @@ namespace RawTextureManager {
 		private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
 			treeView1.Nodes.Clear();
 			currentFile = null;
+		}
+
+		private void btnReplace_Click(object sender, EventArgs e) {
+			object tag = treeView1.SelectedNode.Tag;
+			if (tag is DatTexture) {
+				if (replaceFileDialog.ShowDialog() == DialogResult.OK) {
+					((DatTexture)tag).Replace((Bitmap)Bitmap.FromFile(replaceFileDialog.FileName));
+					goodPictureBox1.Picture = ((DatTexture)tag).Extract();
+				}
+			}
+		}
+
+		private void btnExtract_Click(object sender, EventArgs e) {
+			object tag = treeView1.SelectedNode.Tag;
+			if (tag is DatTexture) {
+				if (exportFileDialog.ShowDialog() == DialogResult.OK) {
+					((DatTexture)tag).Extract().Save(exportFileDialog.FileName);
+				}
+			}
 		}
 	}
 }
