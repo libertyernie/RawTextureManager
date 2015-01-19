@@ -69,7 +69,7 @@ namespace RawTextureManager {
 			DatTextureDefinition D = Definition;
 			TextureConverter texconv = TextureConverter.Get(D.Type);
 
-			int texsize = texconv.GetMipOffset(D.Width, D.Height, D.MipLevels + 1);
+			int texsize = D.GetTextureSize();
 			using (UnsafeBuffer texbuf = new UnsafeBuffer(sizeof(TEX0v1) + texsize)) {
 				TEX0v1* header = (TEX0v1*)texbuf.Address;
 
@@ -109,7 +109,7 @@ namespace RawTextureManager {
 		}
 
 		public unsafe UnsafeBuffer ExtractPLT0() {
-			int pltsize = Definition.Colors * 2;
+			int pltsize = Definition.GetPaletteSize();
 			UnsafeBuffer pltbuf = new UnsafeBuffer(pltsize + sizeof(PLT0v1));
 
 			PLT0v1* header = (PLT0v1*)pltbuf.Address;

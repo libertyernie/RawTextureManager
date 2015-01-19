@@ -30,6 +30,10 @@ namespace RawTextureManager {
 		public DatTextureDefinition() {
 			this.MipLevels = 1;
 		}
+
+		public int GetTextureSize() {
+			return TextureConverter.Get(Type).GetMipOffset(Width, Height, MipLevels + 1);
+		}
 	}
 
 	public class DatPaletteDefinition {
@@ -37,5 +41,9 @@ namespace RawTextureManager {
 		public int Colors { get; set; }
 		[JsonConverter(typeof(HexIntConverter))]
 		public int Location { get; set; }
+
+		public int GetPaletteSize() {
+			return Colors * 2;
+		}
 	}
 }
