@@ -48,6 +48,24 @@ namespace RawTextureManager {
 			exportFileDialog = new SaveFileDialog();
 
 			treeView1.AfterSelect += treeView1_AfterSelect;
+
+			treeView1.KeyDown += (o, e) => {
+				if (e.KeyCode == Keys.F9) {
+					e.Handled = true;
+					using (OpenFileDialog dialog = new OpenFileDialog()) {
+						dialog.Filter = "Text files|*.txt";
+						if (dialog.ShowDialog() == DialogResult.OK) {
+							DatFileDefinition def = PlacementsTextParser.ParseFile(dialog.FileName);
+							using (SaveFileDialog dialog2 = new SaveFileDialog()) {
+								dialog2.Filter = "JSON files|*.json";
+								if (dialog2.ShowDialog() == DialogResult.OK) {
+									File.WriteAllText(dialog2.FileName, JsonConvert.SerializeObject(def));
+								}
+							}
+						}
+					}
+				}
+			};
 		}
 
 		void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
