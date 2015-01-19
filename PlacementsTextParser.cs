@@ -23,7 +23,7 @@ namespace RawTextureManager {
 		}
 
 		public static DatFileDefinition ParseFile(string txtPath) {
-			Regex rDefline = new Regex(@"^(\d\d)? ?- +(\d\d([^ ]*) - )?([^ ]*)( \((\d*) lines\*?\))?( \*)?");
+			Regex rDefline = new Regex(@"^((\d\d)? ?- +)?(\d\d([^ ]*) - )?([^ ]*)( \((\d*) lines\*?\))?( \*)?");
 			List<DatTextureDefinition> list = new List<DatTextureDefinition>();
 			int lastNumColors = 0;
 			using (FileStream stream = new FileStream(txtPath, FileMode.Open, FileAccess.Read)) {
@@ -36,18 +36,18 @@ namespace RawTextureManager {
 						var match = rDefline.Match(line);
 
 						DatTextureDefinition tex = new DatTextureDefinition();
-						string number = match.Groups[1].Value;
-						tex.Name = match.Groups[3].Value;
+						string number = match.Groups[2].Value;
+						tex.Name = match.Groups[4].Value;
 						if (string.IsNullOrWhiteSpace(tex.Name)) {
 							IEnumerable<string> matchingDirectories = Directory.EnumerateDirectories(Path.GetDirectoryName(txtPath), number + "*");
 							tex.Name = matchingDirectories.Any() ? Path.GetFileName(matchingDirectories.First()).Substring(2) : number;
 						}
-						tex.Location = int.Parse(match.Groups[4].Value, System.Globalization.NumberStyles.HexNumber);
-						if (match.Groups[6].Success) {
+						tex.Location = int.Parse(match.Groups[5].Value, System.Globalization.NumberStyles.HexNumber);
+						if (match.Groups[7].Success) {
 							tex.Palette = new DatPaletteDefinition();
-							tex.Palette.Colors = int.Parse(match.Groups[6].Value) * 8;
+							tex.Palette.Colors = int.Parse(match.Groups[7].Value) * 8;
 							lastNumColors = tex.Palette.Colors;
-						} else if (match.Groups[7].Success) {
+						} else if (match.Groups[8].Success) {
 							tex.Palette = new DatPaletteDefinition();
 							tex.Palette.Colors = lastNumColors;
 						}
@@ -65,6 +65,10 @@ namespace RawTextureManager {
 				DatTextureDefinition tex = list[i];
 
 				IEnumerable<string> directories = Directory.EnumerateDirectories(Path.GetDirectoryName(txtPath), "*" + tex.Name);
+				if (!directories.Any()) {
+					tex.Name = Microsoft.VisualBasic.Interaction.InputBox("Could not find texture " + tex.Name + ". Does it have a different name in the folder?");
+					directories = Directory.EnumerateDirectories(Path.GetDirectoryName(txtPath), "*" + tex.Name);
+				}
 				IEnumerable<string> filenames = Directory.EnumerateFiles(directories.First(), "*.tga");
 				foreach (string filename in filenames) {
 					Match match = rNamePattern.Match(filename);

@@ -1,0 +1,495 @@
+{
+  "Name": "*PlFe??.dat",
+  "Textures": [
+    {
+      "Name": "ArmorBACK",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x22300"
+    },
+    {
+      "Name": "ArmorBACKW",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x24300"
+    },
+    {
+      "Name": "SwordHilt",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x24F80"
+    },
+    {
+      "Name": "SwordE2",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x26F80"
+    },
+    {
+      "Name": "SwordEnd",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x27180"
+    },
+    {
+      "Name": "SheathTOP",
+      "Type": "CMPR",
+      "Width": 48,
+      "Height": 100,
+      "Location": "0x27380"
+    },
+    {
+      "Name": "SheathBody",
+      "Type": "CMPR",
+      "Width": 48,
+      "Height": 280,
+      "Location": "0x27D40"
+    },
+    {
+      "Name": "BootButton",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x29780"
+    },
+    {
+      "Name": "ArmorInner",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x29F80"
+    },
+    {
+      "Name": "ArmorShoulder",
+      "Type": "CMPR",
+      "Width": 220,
+      "Height": 220,
+      "Location": "0x2BF80"
+    },
+    {
+      "Name": "ArmorShW",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x32180"
+    },
+    {
+      "Name": "Blade",
+      "Type": "CMPR",
+      "Width": 24,
+      "Height": 164,
+      "Location": "0x34180"
+    },
+    {
+      "Name": "Lion",
+      "Type": "CMPR",
+      "Width": 90,
+      "Height": 80,
+      "Location": "0x34960"
+    },
+    {
+      "Name": "Belt",
+      "Type": "CMPR",
+      "Width": 224,
+      "Height": 64,
+      "Location": "0x35860"
+    },
+    {
+      "Name": "BeltEnd",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 64,
+      "Location": "0x37460"
+    },
+    {
+      "Name": "Pit",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x37E60"
+    },
+    {
+      "Name": "Shirt",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x39E60"
+    },
+    {
+      "Name": "Collar",
+      "Type": "CMPR",
+      "Width": 148,
+      "Height": 90,
+      "Location": "0x3AE60"
+    },
+    {
+      "Name": "ShirtCollar",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 32,
+      "Location": "0x3CAE0"
+    },
+    {
+      "Name": "Arm",
+      "Type": "CMPR",
+      "Width": 54,
+      "Height": 148,
+      "Location": "0x3D2E0"
+    },
+    {
+      "Name": "Marking",
+      "Type": "CMPR",
+      "Width": 16,
+      "Height": 138,
+      "Location": "0x3E380"
+    },
+    {
+      "Name": "SkirtRim",
+      "Type": "CMPR",
+      "Width": 148,
+      "Height": 128,
+      "Location": "0x3E800"
+    },
+    {
+      "Name": "PitWide",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x40E00"
+    },
+    {
+      "Name": "ArmorChest",
+      "Type": "CMPR",
+      "Width": 148,
+      "Height": 148,
+      "Location": "0x42E00"
+    },
+    {
+      "Name": "ArmorChestW",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x45B20"
+    },
+    {
+      "Name": "ArmorSternum",
+      "Type": "CMPR",
+      "Width": 156,
+      "Height": 128,
+      "Location": "0x47B20"
+    },
+    {
+      "Name": "ArmorSW",
+      "Type": "CMPR",
+      "Width": 90,
+      "Height": 74,
+      "Location": "0x4A320"
+    },
+    {
+      "Name": "Hair1",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x4B220"
+    },
+    {
+      "Name": "Hair2",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x4C220"
+    },
+    {
+      "Name": "Headband",
+      "Type": "CMPR",
+      "Width": 320,
+      "Height": 80,
+      "Location": "0x4E220"
+    },
+    {
+      "Name": "HeadbanW",
+      "Type": "CMPR",
+      "Width": 182,
+      "Height": 46,
+      "Location": "0x51420"
+    },
+    {
+      "Name": "Throat",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x52560"
+    },
+    {
+      "Name": "Hair3",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x54560"
+    },
+    {
+      "Name": "Eye_L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x56560"
+    },
+    {
+      "Name": "Eye_R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x59C80"
+    },
+    {
+      "Name": "Face",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x5D3A0"
+    },
+    {
+      "Name": "Ear",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x5E3A0"
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x5EBA0"
+    },
+    {
+      "Name": "HairSide",
+      "Type": "CMPR",
+      "Width": 98,
+      "Height": 128,
+      "Location": "0x5FBA0"
+    },
+    {
+      "Name": "Connector-Sheath",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 32,
+      "Location": "0x615A0"
+    },
+    {
+      "Name": "BootSilver",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x61620"
+    },
+    {
+      "Name": "Glove",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x63620"
+    },
+    {
+      "Name": "GloveF",
+      "Type": "CMPR",
+      "Width": 90,
+      "Height": 48,
+      "Location": "0x65620"
+    },
+    {
+      "Name": "Fingernail",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x65F20"
+    },
+    {
+      "Name": "BootTop",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x66120"
+    },
+    {
+      "Name": "BootMAIN",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x67120"
+    },
+    {
+      "Name": "BootTip",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x69120"
+    },
+    {
+      "Name": "PantF",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x69920"
+    },
+    {
+      "Name": "PantB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x6A920"
+    },
+    {
+      "Name": "Grey",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 32,
+      "Location": "0x6B920"
+    },
+    {
+      "Name": "OOS-Armor",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x6BD20"
+    },
+    {
+      "Name": "OOS-Head",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x6C520"
+    },
+    {
+      "Name": "OOS-Arm",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 16,
+      "Location": "0x6CD20"
+    },
+    {
+      "Name": "OOS-Leg",
+      "Type": "CMPR",
+      "Width": 31,
+      "Height": 128,
+      "Location": "0x6CF20"
+    },
+    {
+      "Name": "CapeOut",
+      "Type": "CMPR",
+      "Width": 198,
+      "Height": 282,
+      "Location": "0x6D720"
+    },
+    {
+      "Name": "CapeInner",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 198,
+      "Location": "0x747A0"
+    },
+    {
+      "Name": "ArmorPit",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 80,
+      "Location": "0x78940"
+    },
+    {
+      "Name": "ArmorPW",
+      "Type": "CMPR",
+      "Width": 86,
+      "Height": 54,
+      "Location": "0x79D40"
+    },
+    {
+      "Name": "SleeveD",
+      "Type": "CMPR",
+      "Width": 84,
+      "Height": 84,
+      "Location": "0x7A6E0"
+    },
+    {
+      "Name": "Buckle",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x7B600"
+    },
+    {
+      "Name": "EyeHalf-L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x7CA40"
+    },
+    {
+      "Name": "EyeClose-L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x80160"
+    },
+    {
+      "Name": "EyeHurt-L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x83880"
+    },
+    {
+      "Name": "EyeLeft-L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x86FA0"
+    },
+    {
+      "Name": "EyeRight-L",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x8A6C0"
+    },
+    {
+      "Name": "EyeHalf-R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x8DDE0"
+    },
+    {
+      "Name": "EyeClose-R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x91500"
+    },
+    {
+      "Name": "EyeHurt-R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x94C20"
+    },
+    {
+      "Name": "EyeLeft-R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x98340"
+    },
+    {
+      "Name": "EyeRight-R",
+      "Type": "CMPR",
+      "Width": 164,
+      "Height": 164,
+      "Location": "0x9BA60"
+    }
+  ]
+}

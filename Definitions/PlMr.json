@@ -1,0 +1,294 @@
+{
+  "Name": "*PlMr??.dat",
+  "Textures": [
+    {
+      "Name": "PantLeg1",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x1AD60"
+    },
+    {
+      "Name": "PantLeg2",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x1CD60"
+    },
+    {
+      "Name": "OverallStrap",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 256,
+      "Location": "0x1ED60"
+    },
+    {
+      "Name": "Button",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1FD60"
+    },
+    {
+      "Name": "Overall",
+      "Type": "CMPR",
+      "Width": 256,
+      "Height": 256,
+      "Location": "0x209E0"
+    },
+    {
+      "Name": "Shirt",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x289E0"
+    },
+    {
+      "Name": "Jaw",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x299E0"
+    },
+    {
+      "Name": "Sleeve",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x2A1E0"
+    },
+    {
+      "Name": "VisorB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x2C1E0"
+    },
+    {
+      "Name": "Eye",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x2C9E0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x359E0"
+      }
+    },
+    {
+      "Name": "M",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x35C00"
+    },
+    {
+      "Name": "Hair",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x36C00"
+    },
+    {
+      "Name": "Fleshtache",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x37000"
+    },
+    {
+      "Name": "Ear",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x38000"
+    },
+    {
+      "Name": "Nose",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x38800"
+    },
+    {
+      "Name": "Red",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 32,
+      "Location": "0x38A00"
+    },
+    {
+      "Name": "CreaseC",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x38A80"
+    },
+    {
+      "Name": "CreaseC2",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x39280"
+    },
+    {
+      "Name": "HairSide",
+      "Type": "CMPR",
+      "Width": 16,
+      "Height": 32,
+      "Location": "0x3A280"
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x3A380"
+    },
+    {
+      "Name": "RedPix",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x3AB80"
+    },
+    {
+      "Name": "VisorT",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x3ABA0"
+    },
+    {
+      "Name": "Moustache",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x3B3A0"
+    },
+    {
+      "Name": "Shoe",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x3BBA0"
+    },
+    {
+      "Name": "ShoeW",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x3CBA0"
+    },
+    {
+      "Name": "ShoeB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x3DBA0"
+    },
+    {
+      "Name": "GloveT",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x3EBA0"
+    },
+    {
+      "Name": "GloveFinger",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x40BA0"
+    },
+    {
+      "Name": "GloveB",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x413A0"
+    },
+    {
+      "Name": "OOS-OverallF",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x433A0"
+    },
+    {
+      "Name": "OOS-OverallB",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x437A0"
+    },
+    {
+      "Name": "OOS-Face",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x43BA0"
+    },
+    {
+      "Name": "EyeHalf",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x448A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x718A0"
+      }
+    },
+    {
+      "Name": "EyeClose",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x4D8A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x71AC0"
+      }
+    },
+    {
+      "Name": "EyeHurt",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x568A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x71CE0"
+      }
+    },
+    {
+      "Name": "EyeB",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x5F8A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x71F00"
+      }
+    },
+    {
+      "Name": "EyeF",
+      "Type": "CI8",
+      "Width": 190,
+      "Height": 190,
+      "Location": "0x688A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x72120"
+      }
+    }
+  ]
+}

@@ -59,7 +59,7 @@ namespace RawTextureManager {
 							using (SaveFileDialog dialog2 = new SaveFileDialog()) {
 								dialog2.Filter = "JSON files|*.json";
 								if (dialog2.ShowDialog() == DialogResult.OK) {
-									File.WriteAllText(dialog2.FileName, JsonConvert.SerializeObject(def));
+									File.WriteAllText(dialog2.FileName, JsonConvert.SerializeObject(def, Formatting.Indented));
 								}
 							}
 						}
@@ -98,6 +98,7 @@ namespace RawTextureManager {
 				currentFile = new DatFile(openFileDialog.FileName, defs.SelectMany(d => d.Textures));
 
 				treeView1.Nodes.Clear();
+				btnReplace.Enabled = btnExtract.Enabled = false;
 				foreach (DatTexture t in currentFile.Textures) {
 					TreeNode node = treeView1.Nodes.Add(t.Definition.Name);
 					node.Tag = t;
