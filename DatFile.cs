@@ -22,7 +22,7 @@ namespace RawTextureManager {
 		public DatFile(string name, IEnumerable<DatTextureDefinition> textures) {
 			Name = name;
 			Data = File.ReadAllBytes(Name);
-			Textures = textures.Select(t => new DatTexture(this, t)).ToList().AsReadOnly();
+			Textures = textures.Select(t => new DatTexture(this, t)).OrderBy(t => t.Definition.Location).ToList().AsReadOnly();
 			Modified = false;
 		}
 	}

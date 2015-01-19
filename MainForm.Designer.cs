@@ -35,10 +35,11 @@
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.btnReplace = new System.Windows.Forms.Button();
-			this.btnExtract = new System.Windows.Forms.Button();
 			this.goodPictureBox1 = new System.Windows.Forms.GoodPictureBox();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.btnExtract = new System.Windows.Forms.Button();
+			this.btnReplace = new System.Windows.Forms.Button();
+			this.lblTexInfo = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -74,40 +75,40 @@
 			// openToolStripMenuItem
 			// 
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.openToolStripMenuItem.Text = "&Open";
 			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
 			// 
 			// saveToolStripMenuItem
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.saveToolStripMenuItem.Text = "&Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.saveAsToolStripMenuItem.Text = "Save &As...";
 			this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
 			// 
 			// closeToolStripMenuItem
 			// 
 			this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-			this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.closeToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.closeToolStripMenuItem.Text = "&Close";
 			this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(120, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
 			// 
 			// helpToolStripMenuItem
@@ -146,10 +147,20 @@
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.goodPictureBox1);
+			this.splitContainer1.Panel2.Controls.Add(this.lblTexInfo);
 			this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
 			this.splitContainer1.Size = new System.Drawing.Size(484, 337);
 			this.splitContainer1.SplitterDistance = 161;
 			this.splitContainer1.TabIndex = 2;
+			// 
+			// goodPictureBox1
+			// 
+			this.goodPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.goodPictureBox1.Location = new System.Drawing.Point(0, 16);
+			this.goodPictureBox1.Name = "goodPictureBox1";
+			this.goodPictureBox1.Picture = null;
+			this.goodPictureBox1.Size = new System.Drawing.Size(319, 291);
+			this.goodPictureBox1.TabIndex = 2;
 			// 
 			// tableLayoutPanel1
 			// 
@@ -166,18 +177,6 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(319, 30);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
-			// btnReplace
-			// 
-			this.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnReplace.Enabled = false;
-			this.btnReplace.Location = new System.Drawing.Point(3, 3);
-			this.btnReplace.Name = "btnReplace";
-			this.btnReplace.Size = new System.Drawing.Size(153, 24);
-			this.btnReplace.TabIndex = 0;
-			this.btnReplace.Text = "&Replace";
-			this.btnReplace.UseVisualStyleBackColor = true;
-			this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
-			// 
 			// btnExtract
 			// 
 			this.btnExtract.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -190,14 +189,26 @@
 			this.btnExtract.UseVisualStyleBackColor = true;
 			this.btnExtract.Click += new System.EventHandler(this.btnExtract_Click);
 			// 
-			// goodPictureBox1
+			// btnReplace
 			// 
-			this.goodPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.goodPictureBox1.Location = new System.Drawing.Point(0, 0);
-			this.goodPictureBox1.Name = "goodPictureBox1";
-			this.goodPictureBox1.Picture = null;
-			this.goodPictureBox1.Size = new System.Drawing.Size(319, 307);
-			this.goodPictureBox1.TabIndex = 2;
+			this.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnReplace.Enabled = false;
+			this.btnReplace.Location = new System.Drawing.Point(3, 3);
+			this.btnReplace.Name = "btnReplace";
+			this.btnReplace.Size = new System.Drawing.Size(153, 24);
+			this.btnReplace.TabIndex = 0;
+			this.btnReplace.Text = "&Replace";
+			this.btnReplace.UseVisualStyleBackColor = true;
+			this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
+			// 
+			// lblTexInfo
+			// 
+			this.lblTexInfo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.lblTexInfo.Location = new System.Drawing.Point(0, 0);
+			this.lblTexInfo.Name = "lblTexInfo";
+			this.lblTexInfo.Size = new System.Drawing.Size(319, 16);
+			this.lblTexInfo.TabIndex = 3;
+			this.lblTexInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// MainForm
 			// 
@@ -239,6 +250,7 @@
 		private System.Windows.Forms.Button btnExtract;
 		private System.Windows.Forms.Button btnReplace;
 		private System.Windows.Forms.GoodPictureBox goodPictureBox1;
+		private System.Windows.Forms.Label lblTexInfo;
 
 	}
 }
