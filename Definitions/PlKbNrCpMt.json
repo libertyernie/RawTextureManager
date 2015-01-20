@@ -1,86 +1,86 @@
 {
-	"name": "*PlKbNrCpMt.dat",
-	"textures": [
-        {
-            "name": "Eye",
-            "type": "CI8",
-            "width": 128,
-            "height": 128,
-            "location": "0x119C0",
-            "palette": {
-                "type": "RGB565",
-                "colors": 256,
-                "location": "0x159C0"
-            }
-        },
-		{
-			"name": "Mouth",
-			"type": "CMPR",
-			"width": 96,
-			"height": 80,
-			"location": "0x15BE0"
-		},
-		{
-			"name": "Skin",
-			"type": "CMPR",
-			"width": 8,
-			"height": 8,
-			"location": "0x16AE0"
-		},
-		{
-			"name": "Foot",
-			"type": "CMPR",
-			"width": 128,
-			"height": 64,
-			"location": "0x16B00"
-		},
-		{
-			"name": "Eye Half-Closed",
-			"type": "CI8",
-			"width": 128,
-			"height": 128,
-			"location": "0x18040",
-			"palette": {
-				"type": "RGB565",
-				"colors": 256,
-				"location": "0x24040"
-			}
-		},
-		{
-			"name": "Eye Closed",
-			"type": "CI8",
-			"width": 128,
-			"height": 128,
-			"location": "0x1C040",
-			"palette": {
-				"type": "RGB565",
-				"colors": 256,
-				"location": "0x24260"
-			}
-		},
-		{
-			"name": "Eye Hurt (Left)",
-			"type": "CI8",
-			"width": 128,
-			"height": 128,
-			"location": "0x20040",
-			"palette": {
-				"type": "RGB565",
-				"colors": 256,
-				"location": "0x24480"
-			}
-		},
-		{
-			"name": "Eye Hurt (Right)",
-			"type": "CI8",
-			"width": 128,
-			"height": 128,
-			"location": "0x246A0",
-			"palette": {
-				"type": "RGB565",
-				"colors": 256,
-				"location": "0x286A0"
-			}
-		}
-	]
+  "Name": "*PlKbNrCpMt.dat",
+  "Textures": [
+    {
+      "Name": "KirbyEye",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x119C0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x159C0"
+      }
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 96,
+      "Height": 80,
+      "Location": "0x15BE0"
+    },
+    {
+      "Name": "Skin",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x16AE0"
+    },
+    {
+      "Name": "Foot",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x16B00"
+    },
+    {
+      "Name": "HalfEye",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x18040",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 144,
+        "Location": "0x24040"
+      }
+    },
+    {
+      "Name": "EyeClose",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x1C040",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 240,
+        "Location": "0x24260"
+      }
+    },
+    {
+      "Name": "EyeHurt-L",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x20040",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x24480"
+      }
+    },
+    {
+      "Name": "EyeHurt-R",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x246A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x286A0"
+      }
+    }
+  ]
 }

@@ -1,127 +1,127 @@
-﻿{
-    "name": "*PlKb??.dat",
-    "textures": [
-        {
-            "name": "Eye",
-            "type": "CI8",
-            "width": 128,
-            "height": 128,
-            "location": "0x1FCA0",
-            "palette": {
-                "type": "RGB565",
-                "colors": 256,
-                "location": "0x23CA0"
-            }
-        },
-        {
-            "name": "HappyFR",
-            "type": "CI8",
-            "width": 96,
-            "height": 64,
-            "location": "0x23EC0",
-            "palette": {
-                "type": "RGB565",
-                "colors": 192,
-				"location": "0x256C0"
-            }
-        },
-        {
-            "name": "StoneSideA",
-            "type": "CMPR",
-            "width": 128,
-            "height": 128,
-            "location": "0x25860"
-        },
-        {
-            "name": "StoneSideB",
-            "type": "CMPR",
-            "width": 128,
-            "height": 128,
-            "location": "0x27860"
-        },
-        {
-            "name": "StoneFace",
-            "type": "CMPR",
-            "width": 128,
-            "height": 128,
-            "location": "0x29860"
-        },
-        {
-            "name": "Grey",
-            "type": "CMPR",
-            "width": 8,
-            "height": 32,
-            "location": "0x2B860"
-        },
-        {
-            "name": "BlueBrown",
-            "type": "CMPR",
-            "width": 8,
-            "height": 32,
-            "location": "0x2B8E0"
-        },
-        {
-            "name": "BlueBlack",
-            "type": "CMPR",
-            "width": 8,
-            "height": 16,
-            "location": "0x2B960"
-        },
-        {
-            "name": "ThwompB",
-            "type": "CMPR",
-            "width": 64,
-            "height": 64,
-            "location": "0x2B9A0"
-        },
-        {
-            "name": "Thwomp",
-            "type": "CMPR",
-            "width": 64,
-            "height": 128,
-            "location": "0x2C1A0"
-        },
-		{
-			"name": "100T Handle",
-			"type": "CMPR",
-			"width": 16,
-			"height": 16,
-			"location": "0x2D1A0"
-		},
-		{
-			"name": "100T Top",
-			"type": "CMPR",
-			"width": 32,
-			"height": 32,
-			"location": "0x2DA20"
-		},
-		{
-			"name": "100T",
-			"type": "CMPR",
-			"width": 128,
-			"height": 128,
-			"location": "0x2DC20"
-		},
-		{
-			"name": "Mouth",
-			"type": "CMPR",
-			"width": 96,
-			"height": 80,
-			"location": "0x2FC20"
-		},
-		{
-			"name": "Skin",
-			"type": "CMPR",
-			"width": 8,
-			"height": 8,
-			"location": "0x30B20"
-		},
-		{
-			"name": "Foot",
-			"type": "CMPR",
-			"width": 128,
-			"height": 64,
-			"location": "0x30B40"
-		}
-    ]
+{
+  "Name": "*PlKb??.dat",
+  "Textures": [
+    {
+      "Name": "KirbyEye",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x1FCA0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x23CA0"
+      }
+    },
+    {
+      "Name": "HappyFR",
+      "Type": "CI8",
+      "Width": 96,
+      "Height": 64,
+      "Location": "0x23EC0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 192,
+        "Location": "0x256C0"
+      }
+    },
+    {
+      "Name": "StoneSideA",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x25860"
+    },
+    {
+      "Name": "StoneSideB",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x27860"
+    },
+    {
+      "Name": "StoneFace",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x29860"
+    },
+    {
+      "Name": "Grey",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 32,
+      "Location": "0x2B860"
+    },
+    {
+      "Name": "BlueBrown",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 32,
+      "Location": "0x2B8E0"
+    },
+    {
+      "Name": "BlueBlack",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 16,
+      "Location": "0x2B960"
+    },
+    {
+      "Name": "ThwompB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x2B9A0"
+    },
+    {
+      "Name": "Thwomp",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x2C1A0"
+    },
+    {
+      "Name": "100THandle",
+      "Type": "CMPR",
+      "Width": 16,
+      "Height": 16,
+      "Location": "0x2D1A0"
+    },
+    {
+      "Name": "100TTop",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x2DA20"
+    },
+    {
+      "Name": "100T",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x2DC20"
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 96,
+      "Height": 80,
+      "Location": "0x2FC20"
+    },
+    {
+      "Name": "Skin",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x30B20"
+    },
+    {
+      "Name": "Foot",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 64,
+      "Location": "0x30B40"
+    }
+  ]
 }

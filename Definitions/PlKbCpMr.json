@@ -1,66 +1,66 @@
 {
-	"name": "*PlKbCpMr.dat",
-	"textures": [
-		{
-			"name": "Fireball",
-			"type": "CI8",
-			"width": 128,
-			"height": 128,
-			"location": "0x5C20",
-			"palette": {
-				"type": "RGB5A3",
-				"colors": 256,
-				"location": "0x9C20"
-			}
-		},
-		{
-			"name": "VisorB",
-			"type": "CMPR",
-			"width": 64,
-			"height": 64,
-			"location": "0x2080"
-		},
-		{
-			"name": "M",
-			"type": "CMPR",
-			"width": 64,
-			"height": 128,
-			"location": "0x2880"
-		},
-        {
-            "name": "Red",
-            "type": "CMPR",
-            "width": 8,
-            "height": 32,
-            "location": "0x3880"
-        },
-		{
-			"name": "CreaseC",
-			"type": "CMPR",
-			"width": 64,
-			"height": 64,
-			"location": "0x3900"
-		},
-		{
-			"name": "CreaseC2",
-			"type": "CMPR",
-			"width": 64,
-			"height": 128,
-			"location": "0x4100"
-		},
-        {
-            "name": "RedPix",
-            "type": "CMPR",
-            "width": 8,
-            "height": 8,
-            "location": "0x5100"
-        },
-        {
-            "name": "VisorT",
-            "type": "CMPR",
-            "width": 64,
-            "height": 64,
-            "location": "0x5120"
-        }
-	]
+  "Name": "*PlKbCpMr.dat",
+  "Textures": [
+    {
+      "Name": "Fireball",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x5C20",
+      "Palette": {
+        "Type": "RGB5A3",
+        "Colors": 256,
+        "Location": "0x9C20"
+      }
+    },
+    {
+      "Name": "VisorB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x2080"
+    },
+    {
+      "Name": "M",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x2880"
+    },
+    {
+      "Name": "Red",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 32,
+      "Location": "0x3880"
+    },
+    {
+      "Name": "CreaseC",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x3900"
+    },
+    {
+      "Name": "CreaseC2",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x4100"
+    },
+    {
+      "Name": "RedPix",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x5100"
+    },
+    {
+      "Name": "VisorT",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x5120"
+    }
+  ]
 }

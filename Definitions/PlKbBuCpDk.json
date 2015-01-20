@@ -1,16 +1,16 @@
 {
-  "Name": "*PlKbYeCpMt.dat",
+  "Name": "*PlKbBuCpDk.dat",
   "Textures": [
     {
       "Name": "KirbyEye",
       "Type": "CI8",
       "Width": 128,
       "Height": 128,
-      "Location": "0x11820",
+      "Location": "0xF660",
       "Palette": {
         "Type": "RGB565",
         "Colors": 256,
-        "Location": "0x15820"
+        "Location": "0x13660"
       }
     },
     {
@@ -18,32 +18,39 @@
       "Type": "CMPR",
       "Width": 96,
       "Height": 80,
-      "Location": "0x15A40"
+      "Location": "0x13880"
     },
     {
-      "Name": "Skin",
+      "Name": "Head",
       "Type": "CMPR",
-      "Width": 8,
-      "Height": 8,
-      "Location": "0x16940"
+      "Width": 64,
+      "Height": 128,
+      "Location": "0x14780"
+    },
+    {
+      "Name": "Fur_Skin",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 256,
+      "Location": "0x15780"
     },
     {
       "Name": "Foot",
       "Type": "CMPR",
       "Width": 128,
       "Height": 64,
-      "Location": "0x16960"
+      "Location": "0x19780"
     },
     {
       "Name": "HalfEye",
       "Type": "CI8",
       "Width": 128,
       "Height": 128,
-      "Location": "0x17EA0",
+      "Location": "0x1ACA0",
       "Palette": {
         "Type": "RGB565",
         "Colors": 144,
-        "Location": "0x23EA0"
+        "Location": "0x26CA0"
       }
     },
     {
@@ -51,11 +58,11 @@
       "Type": "CI8",
       "Width": 128,
       "Height": 128,
-      "Location": "0x1BEA0",
+      "Location": "0x1ECA0",
       "Palette": {
         "Type": "RGB565",
         "Colors": 240,
-        "Location": "0x23FC0"
+        "Location": "0x26DE0"
       }
     },
     {
@@ -63,11 +70,11 @@
       "Type": "CI8",
       "Width": 128,
       "Height": 128,
-      "Location": "0x1FEA0",
+      "Location": "0x22CA0",
       "Palette": {
         "Type": "RGB565",
         "Colors": 256,
-        "Location": "0x241A0"
+        "Location": "0x27000"
       }
     },
     {
@@ -75,11 +82,11 @@
       "Type": "CI8",
       "Width": 128,
       "Height": 128,
-      "Location": "0x243C0",
+      "Location": "0x27220",
       "Palette": {
         "Type": "RGB565",
         "Colors": 256,
-        "Location": "0x283C0"
+        "Location": "0x2B220"
       }
     }
   ]
