@@ -1,16 +1,16 @@
 {
-	"name": "*PlKbBuCpPr.dat",
+	"name": "*PlKbNrCpMt.dat",
 	"textures": [
         {
             "name": "Eye",
             "type": "CI8",
             "width": 128,
             "height": 128,
-            "location": "0x14240",
+            "location": "0x119C0",
             "palette": {
                 "type": "RGB565",
                 "colors": 256,
-                "location": "0x18240"
+                "location": "0x159C0"
             }
         },
 		{
@@ -18,39 +18,32 @@
 			"type": "CMPR",
 			"width": 96,
 			"height": 80,
-			"location": "0x18460"
-		},
-		{
-			"name": "Ear",
-			"type": "CMPR",
-			"width": 64,
-			"height": 128,
-			"location": "0x19360"
+			"location": "0x15BE0"
 		},
 		{
 			"name": "Skin",
 			"type": "CMPR",
 			"width": 8,
 			"height": 8,
-			"location": "0x1A360"
+			"location": "0x16AE0"
 		},
 		{
 			"name": "Foot",
 			"type": "CMPR",
 			"width": 128,
 			"height": 64,
-			"location": "0x1A380"
+			"location": "0x16B00"
 		},
 		{
 			"name": "Eye Half-Closed",
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x1B8E0",
+			"location": "0x18040",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x278E0"
+				"location": "0x24040"
 			}
 		},
 		{
@@ -58,11 +51,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x1F8E0",
+			"location": "0x1C040",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x27A20"
+				"location": "0x24260"
 			}
 		},
 		{
@@ -70,11 +63,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x238E0",
+			"location": "0x20040",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x27C40"
+				"location": "0x24480"
 			}
 		},
 		{
@@ -82,11 +75,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x27E60",
+			"location": "0x246A0",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x2BE60"
+				"location": "0x286A0"
 			}
 		}
 	]

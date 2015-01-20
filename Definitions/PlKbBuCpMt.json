@@ -1,16 +1,16 @@
 {
-	"name": "*PlKbBuCpPr.dat",
+	"name": "*PlKbBuCpMt.dat",
 	"textures": [
         {
             "name": "Eye",
             "type": "CI8",
             "width": 128,
             "height": 128,
-            "location": "0x14240",
+            "location": "0x11820",
             "palette": {
                 "type": "RGB565",
                 "colors": 256,
-                "location": "0x18240"
+                "location": "0x15820"
             }
         },
 		{
@@ -18,39 +18,32 @@
 			"type": "CMPR",
 			"width": 96,
 			"height": 80,
-			"location": "0x18460"
-		},
-		{
-			"name": "Ear",
-			"type": "CMPR",
-			"width": 64,
-			"height": 128,
-			"location": "0x19360"
+			"location": "0x15A40"
 		},
 		{
 			"name": "Skin",
 			"type": "CMPR",
 			"width": 8,
 			"height": 8,
-			"location": "0x1A360"
+			"location": "0x16940"
 		},
 		{
 			"name": "Foot",
 			"type": "CMPR",
 			"width": 128,
 			"height": 64,
-			"location": "0x1A380"
+			"location": "0x16960"
 		},
 		{
 			"name": "Eye Half-Closed",
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x1B8E0",
+			"location": "0x17EA0",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x278E0"
+				"location": "0x23EA0"
 			}
 		},
 		{
@@ -58,11 +51,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x1F8E0",
+			"location": "0x1BEA0",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x27A20"
+				"location": "0x23FE0"
 			}
 		},
 		{
@@ -70,11 +63,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x238E0",
+			"location": "0x1FEA0",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x27C40"
+				"location": "0x24200"
 			}
 		},
 		{
@@ -82,11 +75,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x27E60",
+			"location": "0x24420",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x2BE60"
+				"location": "0x28420"
 			}
 		}
 	]

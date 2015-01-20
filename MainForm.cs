@@ -75,7 +75,7 @@ namespace RawTextureManager {
 				goodPictureBox1.Picture = bitmap;
 				btnReplace.Enabled = btnExtract.Enabled = true;
 				lblTexInfo.Text = bitmap.Width + "x" + bitmap.Height + " -- " + t.Definition.Type
-					+ (t.Definition.Palette == null ? "" : t.Definition.Palette.Type.ToString())
+					+ (t.Definition.Palette == null ? "" : "/" + t.Definition.Palette.Type.ToString())
 					+ " -- Pos: 0x" + t.Definition.Location.ToString("X") + " Size: 0x" + t.Definition.GetTextureSize().ToString("X");
 			} else {
 				goodPictureBox1.Picture = null;
