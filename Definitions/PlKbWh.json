@@ -9,7 +9,7 @@
       "Location": "0x321E0",
       "Palette": {
         "Type": "RGB565",
-        "Colors": 144,
+        "Colors": 256,
         "Location": "0x3E1E0"
       }
     },
@@ -21,7 +21,7 @@
       "Location": "0x361E0",
       "Palette": {
         "Type": "RGB565",
-        "Colors": 240,
+        "Colors": 224,
         "Location": "0x3E400"
       }
     },
