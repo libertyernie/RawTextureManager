@@ -71,12 +71,18 @@ namespace RawTextureManager {
 		void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
 			if (e.Node.Tag is DatTexture) {
 				DatTexture t = (DatTexture)e.Node.Tag;
-				Bitmap bitmap = t.Extract();
-				goodPictureBox1.Picture = bitmap;
-				btnReplace.Enabled = btnExtract.Enabled = true;
-				lblTexInfo.Text = bitmap.Width + "x" + bitmap.Height + " -- " + t.Definition.Type
-					+ (t.Definition.Palette == null ? "" : "/" + t.Definition.Palette.Type.ToString())
-					+ " -- Pos: 0x" + t.Definition.Location.ToString("X") + " Size: 0x" + t.Definition.GetTextureSize().ToString("X");
+				try {
+					Bitmap bitmap = t.Extract();
+					goodPictureBox1.Picture = bitmap;
+					btnReplace.Enabled = btnExtract.Enabled = true;
+					lblTexInfo.Text = bitmap.Width + "x" + bitmap.Height + " -- " + t.Definition.Type
+						+ (t.Definition.Palette == null ? "" : "/" + t.Definition.Palette.Type.ToString())
+						+ " -- Pos: 0x" + t.Definition.Location.ToString("X") + " Size: 0x" + t.Definition.GetTextureSize().ToString("X");
+				} catch (ArgumentOutOfRangeException) {
+					goodPictureBox1.Picture = null;
+					btnReplace.Enabled = btnExtract.Enabled = false;
+					lblTexInfo.Text = "This texture is not present (location goes past the end of the file.)";
+				}
 			} else {
 				goodPictureBox1.Picture = null;
 				btnReplace.Enabled = btnExtract.Enabled = false;

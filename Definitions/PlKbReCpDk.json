@@ -1,5 +1,5 @@
 ﻿{
-    "name": "*PlKbNrCpDk.dat",
+    "name": "*PlKbReCpDk.dat",
     "textures": [
         {
             "name": "KirbyEye",
@@ -49,7 +49,7 @@
 			"location": "0x1AB00",
 			"palette": {
 				"type": "RGB565",
-				"colors": 256,
+				"colors": 128,
 				"location": "0x26B00"
 			}
 		},
@@ -62,7 +62,7 @@
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x26D20"
+				"location": "0x26C20"
 			}
 		},
 		{
@@ -74,7 +74,7 @@
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x26F40"
+				"location": "0x26E40"
 			}
 		},
 		{
@@ -82,11 +82,11 @@
 			"type": "CI8",
 			"width": 128,
 			"height": 128,
-			"location": "0x27160",
+			"location": "0x27060",
 			"palette": {
 				"type": "RGB565",
 				"colors": 256,
-				"location": "0x2B160"
+				"location": "0x2B060"
 			}
 		}
     ]

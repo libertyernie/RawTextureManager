@@ -1,0 +1,114 @@
+{
+  "Name": "*PlKb??CpFc.dat",
+  "Textures": [
+    {
+      "Name": "KirbyEye",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x159C0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x199C0"
+      }
+    },
+    {
+      "Name": "Head",
+      "Type": "CMPR",
+      "Width": 256,
+      "Height": 256,
+      "Location": "0x0D9C0"
+    },
+    {
+      "Name": "Tongue",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x19BE0"
+    },
+    {
+      "Name": "BeakT",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x19FE0"
+    },
+    {
+      "Name": "BeakB",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 32,
+      "Location": "0x1A7E0"
+    },
+    {
+      "Name": "MouthRoof",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x1ABE0"
+    },
+    {
+      "Name": "Skin",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x1AFE0"
+    },
+    {
+        "Name": "Foot",
+        "Type": "CMPR",
+        "Width": 128,
+        "Height": 64,
+        "Location": "0x1B000"
+    },
+    {
+      "Name": "HalfEye",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x1C5A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x285A0"
+      }
+    },
+    {
+      "Name": "EyeClose",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x205A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x287C0"
+      }
+    },
+    {
+      "Name": "EyeHurt-L",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x245A0",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x289E0"
+      }
+    },
+    {
+      "Name": "EyeHurt-R",
+      "Type": "CI8",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x28C00",
+      "Palette": {
+        "Type": "RGB565",
+        "Colors": 256,
+        "Location": "0x2CC00"
+      }
+    }
+  ]
+}
