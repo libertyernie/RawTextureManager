@@ -59,6 +59,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AvailableDefinitionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvailableDefinitionsForm.Designer.cs">
+      <DependentUpon>AvailableDefinitionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatFile.cs" />
     <Compile Include="DatFileDefinition.cs" />
     <Compile Include="HexIntConverter.cs" />
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvailableDefinitionsForm.resx">
+      <DependentUpon>AvailableDefinitionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

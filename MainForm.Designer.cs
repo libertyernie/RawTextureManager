@@ -36,10 +36,11 @@
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.goodPictureBox1 = new System.Windows.Forms.GoodPictureBox();
+			this.lblTexInfo = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnExtract = new System.Windows.Forms.Button();
 			this.btnReplace = new System.Windows.Forms.Button();
-			this.lblTexInfo = new System.Windows.Forms.Label();
+			this.availableDefinitionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -114,6 +115,7 @@
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.availableDefinitionsToolStripMenuItem,
             this.aboutToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
@@ -122,7 +124,7 @@
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
 			this.aboutToolStripMenuItem.Text = "&About";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
@@ -161,6 +163,15 @@
 			this.goodPictureBox1.Picture = null;
 			this.goodPictureBox1.Size = new System.Drawing.Size(319, 291);
 			this.goodPictureBox1.TabIndex = 2;
+			// 
+			// lblTexInfo
+			// 
+			this.lblTexInfo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.lblTexInfo.Location = new System.Drawing.Point(0, 0);
+			this.lblTexInfo.Name = "lblTexInfo";
+			this.lblTexInfo.Size = new System.Drawing.Size(319, 16);
+			this.lblTexInfo.TabIndex = 3;
+			this.lblTexInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// tableLayoutPanel1
 			// 
@@ -201,14 +212,12 @@
 			this.btnReplace.UseVisualStyleBackColor = true;
 			this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
 			// 
-			// lblTexInfo
+			// availableDefinitionsToolStripMenuItem
 			// 
-			this.lblTexInfo.Dock = System.Windows.Forms.DockStyle.Top;
-			this.lblTexInfo.Location = new System.Drawing.Point(0, 0);
-			this.lblTexInfo.Name = "lblTexInfo";
-			this.lblTexInfo.Size = new System.Drawing.Size(319, 16);
-			this.lblTexInfo.TabIndex = 3;
-			this.lblTexInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.availableDefinitionsToolStripMenuItem.Name = "availableDefinitionsToolStripMenuItem";
+			this.availableDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.availableDefinitionsToolStripMenuItem.Text = "Available &Definitions";
+			this.availableDefinitionsToolStripMenuItem.Click += new System.EventHandler(this.availableDefinitionsToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -251,6 +260,7 @@
 		private System.Windows.Forms.Button btnReplace;
 		private System.Windows.Forms.GoodPictureBox goodPictureBox1;
 		private System.Windows.Forms.Label lblTexInfo;
+		private System.Windows.Forms.ToolStripMenuItem availableDefinitionsToolStripMenuItem;
 
 	}
 }

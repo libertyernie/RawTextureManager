@@ -21,8 +21,10 @@ namespace RawTextureManager {
 
 			foreach (string file in Directory.EnumerateFiles("Definitions")) {
 				try {
-					definitions.Add(JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file)));
-				} catch (JsonSerializationException e) {
+					var d = JsonConvert.DeserializeObject<DatFileDefinition>(File.ReadAllText(file));
+					d.JsonFile = file;
+					definitions.Add(d);
+				} catch (JsonException e) {
 					string filename = Path.GetFileName(file);
 					Console.WriteLine(filename + ": " + e.GetType() + ": " + e.Message + Environment.NewLine + e.StackTrace);
 					MessageBox.Show("Could not parse " + filename + ": " + e.Message, "Error in " + filename);
@@ -88,6 +90,10 @@ namespace RawTextureManager {
 				btnReplace.Enabled = btnExtract.Enabled = false;
 				lblTexInfo.Text = "";
 			}
+		}
+
+		private void availableDefinitionsToolStripMenuItem_Click(object sender, EventArgs e) {
+			new AvailableDefinitionsForm().ShowDialog();
 		}
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
