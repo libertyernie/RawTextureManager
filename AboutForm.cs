@@ -24,6 +24,11 @@ namespace RawTextureManager {
 				((AssemblyTitleAttribute)dll.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0]).Title + "\r\n" +
 				((AssemblyCopyrightAttribute)dll.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false)[0]).Copyright;
 
+			Assembly jsondll = Assembly.GetAssembly(typeof(Newtonsoft.Json.JsonConvert));
+			jsonnet.Text = "Using " +
+				((AssemblyTitleAttribute)jsondll.GetCustomAttributes(typeof(AssemblyTitleAttribute), false)[0]).Title + ": distributed under the same terms as above\r\n" +
+				((AssemblyCopyrightAttribute)jsondll.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false)[0]).Copyright;
+
 			textBox1.Text = "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\r\n" +
 			"\r\n" +
 			"The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\r\n" +

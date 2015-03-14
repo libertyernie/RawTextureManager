@@ -31,6 +31,7 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.copyright = new System.Windows.Forms.Label();
+			this.jsonnet = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -66,7 +67,7 @@
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBox1.Size = new System.Drawing.Size(392, 193);
+			this.textBox1.Size = new System.Drawing.Size(392, 161);
 			this.textBox1.TabIndex = 4;
 			// 
 			// brawllib
@@ -92,6 +93,7 @@
 			// panel2
 			// 
 			this.panel2.Controls.Add(this.textBox1);
+			this.panel2.Controls.Add(this.jsonnet);
 			this.panel2.Controls.Add(this.brawllib);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel2.Location = new System.Drawing.Point(0, 40);
@@ -117,6 +119,16 @@
 			this.copyright.Size = new System.Drawing.Size(50, 13);
 			this.copyright.TabIndex = 0;
 			this.copyright.Text = "copyright";
+			// 
+			// jsonnet
+			// 
+			this.jsonnet.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.jsonnet.Location = new System.Drawing.Point(0, 161);
+			this.jsonnet.Name = "jsonnet";
+			this.jsonnet.Size = new System.Drawing.Size(392, 32);
+			this.jsonnet.TabIndex = 6;
+			this.jsonnet.Text = "jsonnet";
+			this.jsonnet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// AboutForm
 			// 
@@ -148,5 +160,6 @@
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label copyright;
+		private System.Windows.Forms.Label jsonnet;
 	}
 }
