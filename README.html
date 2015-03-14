@@ -12,8 +12,10 @@
   <body>
     <h1>Raw Texture Manager 1.0</h1>
     <p>© 2015 libertyernie<br>
-      <a href="http://lakora.us/brawl/rawtexturemanager">http://lakora.us/brawl/rawtexturemanager</a><br>
-      <a href="https://github.com/libertyernie/rawtexturemanager">https://github.com/libertyernie/rawtexturemanager</a><br>
+      <a href="http://lakora.us/brawl/rawtexturemanager">
+        http://lakora.us/brawl/rawtexturemanager </a><br>
+      <a href="https://github.com/libertyernie/rawtexturemanager">
+        https://github.com/libertyernie/rawtexturemanager </a><br>
     </p>
     <p>Permission is hereby granted, free of charge, to any person
       obtaining a copy of this software and associated documentation
@@ -35,16 +37,27 @@
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
       DEALINGS IN THE SOFTWARE.<br>
     </p>
-    <hr size="2" width="100%"><b>Raw Texture Manager </b>is designed to
-    help you extract and replace the textures inside Super Smash Bros.
-    Melee's uncompressed data files. It doesn't analyze the files or
-    their structure in any way; rather, it tries to match the filename
-    of the .dat file you're trying to open with one or more <b>definition
+    <hr size="2" width="100%">
+    <p><b>Raw Texture Manager </b>is designed to help you extract and
+      replace the textures inside Super Smash Bros. Melee's uncompressed
+      data files. It doesn't analyze the files or their structure in any
+      way; rather, it tries to match the filename of the .dat file
+      you're trying to open with one or more <b>definition files</b><b>
+      </b>in the Definitions folder. Each definition file lists the
+      locations, formats, and sizes of each texture in the .dat file it
+      is describing.<br>
+    </p>
+    <p>Unlike <a
+href="http://smashboards.com/threads/melee-toolkit-now-available-v1-03-alpha.334274/">Melee
 
-
-      files</b><b> </b>in the Definitions folder. Each definition file
-    lists the locations, formats, and sizes of each texture in the .dat
-    file it is describing.<br>
+        Toolkit</a>, this program does not find textures in a file on
+      its own; it needs definition files. As such, it's essentially just
+      a tool to automate the conversion and hex-editing process. In the
+      future, Melee Toolkit (or a program like it) will likely make this
+      program obsolete; until then, hopefully this will help fill some
+      gaps (missing textures, etc.)<br>
+    </p>
+    <p> </p>
     <h3>Definition file format</h3>
     <p>Definition files are in <a href="http://json.org/">JSON</a>, a
       data-interchange format derived from JavaScript and commonly used
