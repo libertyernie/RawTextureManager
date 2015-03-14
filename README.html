@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Raw Texture Manager</title>
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Raw Texture Manager 1.0</h1>
+    <p>© 2015 libertyernie<br>
+      <a href="http://lakora.us/brawl/rawtexturemanager">http://lakora.us/brawl/rawtexturemanager</a><br>
+    </p>
+    <p>Permission is hereby granted, free of charge, to any person
+      obtaining a copy of this software and associated documentation
+      files (the "Software"), to deal in the Software without
+      restriction, including without limitation the rights to use, copy,
+      modify, merge, publish, distribute, sublicense, and/or sell copies
+      of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:<br>
+      <br>
+      The above copyright notice and this permission notice shall be
+      included in all copies or substantial portions of the Software.<br>
+      <br>
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+      HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+      WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+      DEALINGS IN THE SOFTWARE.<br>
+    </p>
+    <hr size="2" width="100%"><b>Raw Texture Manager </b>is designed to
+    help you extract and replace the textures inside Super Smash Bros.
+    Melee's uncompressed data files. It doesn't analyze the files or
+    their structure in any way; rather, it tries to match the filename
+    of the .dat file you're trying to open with one or more <b>definition
+
+
+      files</b><b> </b>in the Definitions folder. Each definition file
+    lists the locations, formats, and sizes of each texture in the .dat
+    file it is describing.<br>
+    <h3>Definition file format</h3>
+    <p>Definition files are in <a href="http://json.org/">JSON</a>, a
+      data-interchange format derived from JavaScript and commonly used
+      to transmit data on the web from one site to another.<br>
+    </p>
+    <p>Each definition file contains an object with three attributes:<br>
+    </p>
+    <ul>
+      <li><b>Name:</b> a filename or pattern to match. For example,
+        PlMr??.dat will match PlMrNr.dat, PlMrBu.dat, and so on, but not
+        PlMr.dat. When opening a file, Raw Texture Manager will use only
+        definitions whose Name attribute matches the filename.</li>
+      <li><b>Description</b>: shown in the Help → Available Definitions
+        window.</li>
+      <li><b>Textures: </b>An array of one or more textures in the
+        file. Each texture definition has the following attributes:</li>
+      <ul>
+        <li><b>Name: </b>The name that the texture will appear under in
+          Raw Texture Manager's list.</li>
+        <li><b>Type:</b> The type of the texture. BrawlLib is used to
+          extract and replace textures; common formats include CMPR and
+          CI8.</li>
+        <li><b>Width:</b> The width of the texture, in pixels.<br>
+        </li>
+        <li><b>Height:</b> The height of the texture, in pixels.</li>
+        <li><b>Location:</b> The offset in the file where the texture
+          starts. Can be specified as a hexadecimal string, e.g.
+          "0x14240".</li>
+        <li><b>Palette: </b>An optional attribute (used for indexed
+          formats like CI8 only.) This is an object with three
+          additional attributes:</li>
+        <ul>
+          <li><b>Type:</b> The type of the palette; typically RGB565 or
+            RGB5A3.</li>
+          <li><b>Colors: </b>The number of colors in the palette.</li>
+          <li><b>Location: </b>The offset in the file where the
+            palettte starts. Can be specified as a hexadecimal string,
+            e.g. "0x18240".</li>
+        </ul>
+      </ul>
+    </ul>
+    <p>This version of Raw Texture Manager contains definitions for:<br>
+    </p>
+    <ul>
+      <li>Roy (any color)</li>
+      <li>Kirby (any color)</li>
+      <ul>
+        <li>Donkey Kong hat (any color)</li>
+        <li>Falco hat (any color)<br>
+        </li>
+        <li>Mewtwo hat (any color)</li>
+        <li>Jigglypuff hat (any color)</li>
+        <li>Mario hat (one file applies to all colors)</li>
+      </ul>
+      <li>Link (any color)</li>
+      <li>Mario (any color)</li>
+      <li>Pikachu (any color)</li>
+    </ul>
+    <p>When opening a custom texture, make sure the filename ends with
+      the original Melee filename; i.e. <b>MyTexture][PlMrNr.dat</b>.<br>
+    </p>
+    <ul>
+      <ul>
+        <ul>
+        </ul>
+      </ul>
+    </ul>
+  </body>
+</html>

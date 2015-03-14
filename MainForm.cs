@@ -96,6 +96,14 @@ namespace RawTextureManager {
 			new AvailableDefinitionsForm().ShowDialog();
 		}
 
+		private void viewREADMEToolStripMenuItem_Click(object sender, EventArgs e) {
+			if (File.Exists("README.html")) {
+				System.Diagnostics.Process.Start("README.html");
+			} else {
+				MessageBox.Show("Could not find README.html.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
 			new AboutForm().ShowDialog();
 		}

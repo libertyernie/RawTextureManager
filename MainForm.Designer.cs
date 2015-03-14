@@ -32,6 +32,7 @@
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.availableDefinitionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -40,7 +41,7 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnExtract = new System.Windows.Forms.Button();
 			this.btnReplace = new System.Windows.Forms.Button();
-			this.availableDefinitionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viewREADMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -116,10 +117,18 @@
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.availableDefinitionsToolStripMenuItem,
+            this.viewREADMEToolStripMenuItem,
             this.aboutToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
 			this.helpToolStripMenuItem.Text = "&Help";
+			// 
+			// availableDefinitionsToolStripMenuItem
+			// 
+			this.availableDefinitionsToolStripMenuItem.Name = "availableDefinitionsToolStripMenuItem";
+			this.availableDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.availableDefinitionsToolStripMenuItem.Text = "Available &Definitions";
+			this.availableDefinitionsToolStripMenuItem.Click += new System.EventHandler(this.availableDefinitionsToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
@@ -212,12 +221,12 @@
 			this.btnReplace.UseVisualStyleBackColor = true;
 			this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
 			// 
-			// availableDefinitionsToolStripMenuItem
+			// viewREADMEToolStripMenuItem
 			// 
-			this.availableDefinitionsToolStripMenuItem.Name = "availableDefinitionsToolStripMenuItem";
-			this.availableDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-			this.availableDefinitionsToolStripMenuItem.Text = "Available &Definitions";
-			this.availableDefinitionsToolStripMenuItem.Click += new System.EventHandler(this.availableDefinitionsToolStripMenuItem_Click);
+			this.viewREADMEToolStripMenuItem.Name = "viewREADMEToolStripMenuItem";
+			this.viewREADMEToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+			this.viewREADMEToolStripMenuItem.Text = "View &README";
+			this.viewREADMEToolStripMenuItem.Click += new System.EventHandler(this.viewREADMEToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -261,6 +270,7 @@
 		private System.Windows.Forms.GoodPictureBox goodPictureBox1;
 		private System.Windows.Forms.Label lblTexInfo;
 		private System.Windows.Forms.ToolStripMenuItem availableDefinitionsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewREADMEToolStripMenuItem;
 
 	}
 }

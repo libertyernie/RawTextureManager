@@ -200,7 +200,11 @@
       <Name>BrawlLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="README.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Definitions\PlKbBu.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
