@@ -109,7 +109,7 @@ namespace RawTextureManager {
 			}
 
 			DatFileDefinition def = new DatFileDefinition();
-			def.Name = Path.GetFileName(Directory.EnumerateFiles(Path.GetDirectoryName(txtPath), "*.dat").FirstOrDefault() ?? "unknown");
+			def.Name = "*" + Path.GetFileName(Directory.EnumerateFiles(Path.GetDirectoryName(txtPath), "*.dat").FirstOrDefault() ?? "unknown");
 			def.Textures = list.ToArray();
 			return def;
 		}

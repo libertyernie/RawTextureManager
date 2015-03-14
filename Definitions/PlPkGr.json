@@ -1,0 +1,159 @@
+{
+  "Name": "*PlPkGr.dat",
+  "Textures": [
+    {
+      "Name": "Skin",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x15F40"
+    },
+    {
+      "Name": "Cowboy2",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x15F60"
+    },
+    {
+      "Name": "Cowboy1",
+      "Type": "CMPR",
+      "Width": 128,
+      "Height": 128,
+      "Location": "0x17F60"
+    },
+    {
+      "Name": "Ear",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x19F60"
+    },
+    {
+      "Name": "Tail",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x1A160"
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x1A360"
+    },
+    {
+      "Name": "Eye_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1AB60"
+    },
+    {
+      "Name": "Cheek",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x1B7E0"
+    },
+    {
+      "Name": "BackStripe",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x1BFE0"
+    },
+    {
+      "Name": "Paw",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x1C7E0"
+    },
+    {
+      "Name": "Nose",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x1C9E0"
+    },
+    {
+      "Name": "Eye_R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1CDE0"
+    },
+    {
+      "Name": "EyeHalf_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1E0C0"
+    },
+    {
+      "Name": "EyeClose_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1ED40"
+    },
+    {
+      "Name": "EyeHURT_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1F9C0"
+    },
+    {
+      "Name": "EyeMad_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x20640"
+    },
+    {
+      "Name": "EyeHappy_L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x212C0"
+    },
+    {
+      "Name": "EyeHalf-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x21F40"
+    },
+    {
+      "Name": "EyeClose-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x22BC0"
+    },
+    {
+      "Name": "EyeHURT-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x23840"
+    },
+    {
+      "Name": "EyeMad-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x244C0"
+    },
+    {
+      "Name": "EyeHappy-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x25140"
+    }
+  ]
+}

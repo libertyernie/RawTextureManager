@@ -1,0 +1,117 @@
+{
+  "Name": "*PlPkNr.dat",
+  "Textures": [
+    {
+      "Name": "Skin",
+      "Type": "CMPR",
+      "Width": 8,
+      "Height": 8,
+      "Location": "0x14160"
+    },
+    {
+      "Name": "Ear",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x14180"
+    },
+    {
+      "Name": "Tail",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x14380"
+    },
+    {
+      "Name": "Mouth",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x14580"
+    },
+    {
+      "Name": "Eye-L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x14D80"
+    },
+    {
+      "Name": "Cheek",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x15A00"
+    },
+    {
+      "Name": "BackStripe",
+      "Type": "CMPR",
+      "Width": 64,
+      "Height": 64,
+      "Location": "0x16200"
+    },
+    {
+      "Name": "Paw",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 32,
+      "Location": "0x16A00"
+    },
+    {
+      "Name": "Nose",
+      "Type": "CMPR",
+      "Width": 32,
+      "Height": 64,
+      "Location": "0x16C00"
+    },
+    {
+      "Name": "Eye-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x17000"
+    },
+    {
+      "Name": "EyeHalf-L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x182A0"
+    },
+    {
+      "Name": "EyeClose-L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x18F20"
+    },
+    {
+      "Name": "EyeHurt-L",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x19BA0"
+    },
+    {
+      "Name": "EyeHalf-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1C120"
+    },
+    {
+      "Name": "EyeClose-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1CDA0"
+    },
+    {
+      "Name": "EyeHurt-R",
+      "Type": "CMPR",
+      "Width": 80,
+      "Height": 80,
+      "Location": "0x1DA20"
+    }
+  ]
+}
